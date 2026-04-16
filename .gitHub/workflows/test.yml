@@ -1,0 +1,14 @@
+name: Pipeline test
+
+on:
+    push:
+        branches:
+            - dev
+
+jobs: 
+    validar-push-dev:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: checkout index :
+            run: test -f index.html 
